@@ -13,7 +13,7 @@ st.subheader('Summarize URL')
 
 ##  get the groq api key and url field to be summarize
 with st.sidebar:
-    api_key = st.text_input("GroqAPI key", value='', type='password')
+    api_key = st.text_input("GroqAPI key", type='password')
 
 generic_url = st.text_input("URL", label_visibility="collapsed")
 
