@@ -78,7 +78,7 @@ if st.button("Summarize the Content from YT ot Website"):
                     map_prompt=prompt,
                     combine_prompt=final_prompt_template
                 )
-                output_summary= chain.run(split)
+                output_summary= chain.invoke(split)
 
                 st.success(output_summary)
         except Exception as e:
