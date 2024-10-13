@@ -17,4 +17,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.codepreet }}
-        run: git push https:/meglow:$HF_TOKEN@huggingface.co/spaces/meglow/codepreet main
+        run: git push https://meglow:$HF_TOKEN@huggingface.co/spaces/meglow/codepreet main
