@@ -12,7 +12,7 @@ st.title("🦜 LangChain: Summarize Text From YT or Website")
 st.subheader('Summarize URL')
 
 ##  get the groq api key and url field to be summarize
-st.sidebar
+st.sidebar.title("Settings")
 api_key = st.text_input("GroqAPI key", type='password')
 
 generic_url = st.text_input("URL", label_visibility="collapsed")
