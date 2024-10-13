@@ -2,7 +2,7 @@ import validators
 import streamlit as st
 from langchain_groq import ChatGroq
 from langchain.prompts import PromptTemplate
-from langchain.document_loaders import YoutubeLoader, UnstructuredURLLoader
+from langchain_community.document_loaders import YoutubeLoader, UnstructuredURLLoader
 from langchain.chains.summarize import load_summarize_chain
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
