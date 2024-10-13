@@ -12,13 +12,17 @@ st.title("🦜 LangChain: Summarize Text From YT or Website")
 st.subheader('Summarize URL')
 
 ##  get the groq api key and url field to be summarize
-st.sidebar.title("Settings")
-api_key = st.text_input("GroqAPI key", type='password')
+with st.sidebar:
+    api_key=st.text_input("Groq API Key",value="",type="password")
 
 generic_url = st.text_input("URL", label_visibility="collapsed")
 
 ## gemma model using groq api
-llm = ChatGroq(model="Gemma-7b-It", groq_api_key=api_key)
+if not api_key:
+    st.error("Please provide a valid Groq API key.")
+else:
+    llm = ChatGroq(model="Gemma-7b-It", groq_api_key=api_key)
+
 
 ## prompt template
 prompt_template = """
